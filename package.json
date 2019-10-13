@@ -2,7 +2,7 @@
   "name": "reason-cat-facts",
   "version": "0.1.0",
   "scripts": {
-  "homepage": "http://sophiabrandt.github.io/reason-cat-facts",
+    "homepage": "http://sophiabrandt.github.io/reason-cat-facts",
     "start": "concurrently -k \"npm run start:bsb\" \"npm run start:webpack\"",
     "start:bsb": "bsb -clean-world -make-world -w",
     "start:webpack": "webpack-dev-server --port 3000",
@@ -23,6 +23,8 @@
     "reason-react": ">=0.7.0"
   },
   "devDependencies": {
+    "@glennsl/bs-json": "^5.0.1",
+    "bs-fetch": "^0.5.0",
     "concurrently": "^5.0.0",
     "file-loader": "^4.2.0",
     "gh-pages": "^2.1.1",
