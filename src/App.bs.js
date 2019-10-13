@@ -2,23 +2,44 @@
 'use strict';
 
 var $$Array = require("bs-platform/lib/js/array.js");
+var Curry = require("bs-platform/lib/js/curry.js");
 var React = require("react");
-var CatItem$ReactHooksTemplate = require("./CatItem.bs.js");
+var CatFactData$ReactHooksTemplate = require("./CatFactData.bs.js");
+var CatFactItem$ReactHooksTemplate = require("./CatFactItem.bs.js");
 
 function App(Props) {
   var match = React.useState((function () {
           return undefined;
         }));
-  var catData = match[0];
-  var catItems = catData !== undefined ? $$Array.map((function (cat) {
-            return React.createElement(CatItem$ReactHooksTemplate.make, {
-                        cat: cat,
-                        key: cat[/* id */0]
+  var setCatFactData = match[1];
+  var catFactData = match[0];
+  React.useEffect((function () {
+          CatFactData$ReactHooksTemplate.fetchCatFacts(/* () */0).then((function (catFactData) {
+                    Curry._1(setCatFactData, (function (_prev) {
+                            return catFactData;
+                          }));
+                    return Promise.resolve(/* () */0);
+                  })).catch((function (err) {
+                  console.log("An error occurred: " + String(err));
+                  return Promise.resolve(/* () */0);
+                }));
+          return undefined;
+        }), ([]));
+  var catFactItems = catFactData !== undefined ? $$Array.map((function (catFact) {
+            return React.createElement(CatFactItem$ReactHooksTemplate.make, {
+                        catFact: catFact,
+                        key: catFact[/* id */0]
                       });
-          }), catData) : "Loading ...";
-  return React.createElement("div", {
-              className: "text-center"
-            }, React.createElement("h1", undefined, "Cat Facts"), React.createElement("div", undefined, catItems));
+          }), catFactData) : "Loading ...";
+  return React.createElement(React.Fragment, undefined, React.createElement("h1", {
+                  className: "text-center"
+                }, "Cat Facts"), React.createElement("div", {
+                  className: "center"
+                }, React.createElement("div", {
+                      style: {
+                        maxWidth: "800px"
+                      }
+                    }, catFactItems)));
 }
 
 var make = App;
