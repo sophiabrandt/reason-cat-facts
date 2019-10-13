@@ -1,0 +1,34 @@
+{
+  "name": "reason-cat-facts",
+  "version": "0.1.0",
+  "scripts": {
+  "homepage": "http://sophiabrandt.github.io/reason-cat-facts",
+    "start": "concurrently -k \"npm run start:bsb\" \"npm run start:webpack\"",
+    "start:bsb": "bsb -clean-world -make-world -w",
+    "start:webpack": "webpack-dev-server --port 3000",
+    "build": "npm run build:webpack",
+    "build:webpack": "NODE_ENV=production webpack",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "format": "refmt src/*.re"
+  },
+  "keywords": [
+    "BuckleScript"
+  ],
+  "author": "Sophia Brandt",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "reason-react": ">=0.7.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "file-loader": "^4.2.0",
+    "gh-pages": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.8"
+  }
+}
