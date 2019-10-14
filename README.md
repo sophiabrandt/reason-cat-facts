@@ -19,7 +19,7 @@
     <a href="https://github.com/sophiabrandt/reason-cat-facts"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="hhttps://github.com/sophiabrandt/reason-cat-facts/">View Demo</a>
+    <a href="https://sophiabrandt.github.io/reason-cat-facts">View Demo</a>
     ·
     <a href="https://github.com/sophiabrandt/reason-cat-facts/issues">Report Bug</a>
     ·
@@ -168,5 +168,5 @@ Project Link: [https://github.com/sophiabrandt/reason-cat-facts](https://github.
 [issues-url]: https://github.com/sophiabrandt/reason-cat-facts/issues
 [license-shield]: https://img.shields.io/github/license/sophiabrandt/reason-cat-facts.svg?style=flat-square
 [license-url]: https://github.com/sophiabrandt/reason-cat-facts/blob/master/LICENSE.txt
-[demo]: https://github.com/sophiabrandt/reason-cat-facts/
+[demo]: https://sophiabrandt.github.io/reason-cat-facts
 [reasontut]: https://jamesfriend.com.au/a-first-reason-react-app-for-js-developers
