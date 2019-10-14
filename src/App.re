@@ -1,5 +1,14 @@
 open ReactUtils;
 
+module Spinner = {
+  [@react.component]
+  let make = () =>
+    <div className="spinner">
+      <div className="double-bounce1" />
+      <div className="double-bounce2" />
+    </div>;
+};
+
 [@react.component]
 let make = () => {
   let (catFactData, setCatFactData) = React.useState(() => None);
@@ -27,11 +36,11 @@ let make = () => {
         catFacts,
       )
       |> ReasonReact.array
-    | None => React.string("Loading ...")
+    | None => <Spinner />
     };
 
   <>
-    <h1 className="text-center"> {"Cat Facts" |> s} </h1>
+    <h1 className="text-center"> {{js|Cat Facts 😸|js} |> s} </h1>
     <div className="center">
       <div style={ReactDOMRe.Style.make(~maxWidth="800px", ())}>
         catFactItems

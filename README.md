@@ -49,15 +49,21 @@
 
 > Fetching data with ReasonReact - with cats! 😸
 
+The project shows a simple ReasonReact app that fetches JSON data from a third-party API.  
+Inspired by [A First Reason React app for Javascript developers][reasontut] by [James Friend](https://github.com/jsdf).
+
 **☞ [View Demo][demo]**
 
-Inspired by [A First Reason React app for Javascript developers][reasontut] by [James Friend](https://github.com/jsdf).
+The live demo might feel sluggish because it relies on two free Heroku instances that may be slow to start up.
 
 ### Built With
 
 - [ReasonML](https://reasonml.github.io/)
 - [ReasonReact](https://reasonml.github.io/reason-react/)
 - [WingCSS](https://github.com/kbrsh/wing)
+- [Cat Facts API](https://github.com/alexwohlbruck/cat-facts)
+
+For the CSS Animations see [Acknowledgements](#acknowledgements).
 
 <!-- GETTING STARTED -->
 
@@ -67,9 +73,7 @@ To get a local copy up and running follow these steps:
 
 ### Prerequisites
 
-You need npm or an alternative package manager (i.e., [pnpm](https://pnpm.js.org/)).
-
-- npm
+You need [Node.js and npm](https://www.npmjs.com/get-npm) or an alternative package manager (i.e., [pnpm](https://pnpm.js.org/)).
 
 ```sh
 npm install npm@latest -g
@@ -148,6 +152,9 @@ Project Link: [https://github.com/sophiabrandt/reason-cat-facts](https://github.
 ## Acknowledgements
 
 - [A First Reason React app for Javascript developers][reasontut]
+- [Cors Anywhere](https://github.com/Rob--W/cors-anywhere)
+- [SpinKit](https://github.com/tobiasahlin/SpinKit)
+- [Pure CSS Gradient Background Animation](https://codepen.io/P1N2O/pen/pyBNzX)
 - [Img Shields](https://shields.io)
 - [Choose an Open Source License](https://choosealicense.com)
 - [Best-README-Template](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)

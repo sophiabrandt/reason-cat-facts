@@ -7,6 +7,18 @@ var React = require("react");
 var CatFactData$ReactHooksTemplate = require("./CatFactData.bs.js");
 var CatFactItem$ReactHooksTemplate = require("./CatFactItem.bs.js");
 
+function App$Spinner(Props) {
+  return React.createElement("div", {
+              className: "spinner"
+            }, React.createElement("div", {
+                  className: "double-bounce1"
+                }), React.createElement("div", {
+                  className: "double-bounce2"
+                }));
+}
+
+var Spinner = /* module */[/* make */App$Spinner];
+
 function App(Props) {
   var match = React.useState((function () {
           return undefined;
@@ -30,10 +42,10 @@ function App(Props) {
                         catFact: catFact,
                         key: catFact[/* id */0]
                       });
-          }), catFactData) : "Loading ...";
+          }), catFactData) : React.createElement(App$Spinner, { });
   return React.createElement(React.Fragment, undefined, React.createElement("h1", {
                   className: "text-center"
-                }, "Cat Facts"), React.createElement("div", {
+                }, "Cat Facts 😸"), React.createElement("div", {
                   className: "center"
                 }, React.createElement("div", {
                       style: {
@@ -44,5 +56,6 @@ function App(Props) {
 
 var make = App;
 
+exports.Spinner = Spinner;
 exports.make = make;
 /* react Not a pure module */
